@@ -41,7 +41,7 @@ python setup.py install --root=$TMPDIR --install-lib=lib --install-scripts=bin
 SCRIPTSDIR=$TMPBINDIR
 cd $SCRIPTSDIR
 
-rm $DOCDIR/*.1
+rm $DOCDIR/man/*.1
 
 echo $SCRIPTSDIR
 for f in `ls`
