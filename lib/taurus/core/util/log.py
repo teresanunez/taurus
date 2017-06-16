@@ -793,6 +793,15 @@ class Logger(Object):
                         out += '<could not find suitable string representation>'
         return out
 
+    def loggingtofile(self, msg, logging_path, *args, **kw):
+
+        file_name = logging_path + "/spock_session.log"
+
+        logging_file = open(file_name, 'a')
+        logging_file.write('\n')
+        logging_file.write(msg)
+        logging_file.close()
+
     def log(self, level, msg, *args, **kw):
         """Record a log message in this object's logger. Accepted *args* and
            *kwargs* are the same as :meth:`logging.Logger.log`.
