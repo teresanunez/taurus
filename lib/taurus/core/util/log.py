@@ -797,10 +797,10 @@ class Logger(Object):
 
         file_name = logging_path + "/spock_session.log"
 
-        logging_file = open(file_name, 'a')
-        logging_file.write('\n')
-        logging_file.write(msg)
-        logging_file.close()
+        with open(file_name, 'a') as logging_file:
+            logging_file.write('\n')
+            logging_file.write(msg)
+            logging_file.close()
 
     def log(self, level, msg, *args, **kw):
         """Record a log message in this object's logger. Accepted *args* and
