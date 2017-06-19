@@ -793,7 +793,7 @@ class Logger(Object):
                         out += '<could not find suitable string representation>'
         return out
 
-    def loggingtofile(self, msg, logging_path, *args, **kw):
+    def log_to_file(self, msg, logging_path, *args, **kw):
 
         file_name = logging_path + "/spock_session.log"
 
